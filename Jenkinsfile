@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+     agent any
 
-    stage{
+     stages{
        // stage 1.Git Build
        stage('1 .Git Build') {
            steps {
