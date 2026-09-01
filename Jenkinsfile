@@ -1,7 +1,7 @@
 pipeline {
      agent any
 
-     stages {
+     stages{
        // stage 1.Git Build
        stage('1. Git Build') {
           steps {
