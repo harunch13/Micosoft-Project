@@ -21,7 +21,7 @@ pipeline {
         // stage 3.Sonarqube Analysis
         stage('3. Sonarqube Analysis') {
             steps {
-                withCredentials([string(CredentialsId: 'sonar-microsoft', variable: 'SONAR_TOKEN')]) {
+                withCredentials([string(credentialsId: 'sonar-microsoft', variable: 'SONAR_TOKEN')]) {
                      withMaven(maven: 'maven3.9.16') {
                         sh "mvn sonar:sonar -Dsonar.host.url=http://sonar:9000 -Dsonar.login=$SONAR_TOKEN"
                     }
